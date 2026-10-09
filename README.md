@@ -2,25 +2,29 @@
 
 A free, offline weight-lifting log for Android. Built for one-handed use between sets: log a set in one tap, see last time's numbers, keep notes, and watch your top set progress. Kilograms, English, dark by default.
 
-- Routines (Day A, Day B, Home) are preloaded and fully editable; supersets, per-side sets and timed holds are supported.
+- Routines (Day A, Day B, Home) are preloaded and fully editable (drag to reorder); supersets, per-side sets and timed holds are supported.
 - Rest timer that vibrates when the rest is over, even with the screen locked.
+- **A notification while a workout is open**: pull the shade down from any app to see what is next (exercise, set, weight and reps), how long you have been going, the live rest countdown and a Skip rest button.
 - Double-progression hints: when every set hits the top of the rep range, it suggests the next weight.
+- Log a workout you forgot, reopen one you finished too early, fix any set in any past workout.
 - Your data stays on your phone. The app has **no internet permission**.
-- Backups: JSON file (restores everything) and CSV (for spreadsheets).
+- Backups: a JSON file (restores everything), CSV for spreadsheets, and optional automatic copies into a folder you pick after every finished workout.
 
-The ready-to-install app is the file **`LiftLog-1.0-release.apk`** at the top of this repository.
+The ready-to-install app is the file **`LiftLog-1.1-release.apk`** at the top of this repository.
 
 ## Install it on your phone (from GitHub)
 
-1. On your phone, open this repository in your browser and tap **`LiftLog-1.0-release.apk`**.
+1. On your phone, open this repository in your browser (signed in to GitHub if the repository is private) and tap **`LiftLog-1.1-release.apk`**.
 2. Tap the download button on that page (it may say **View raw** or show a download arrow). Wait for the download to finish. If your browser asks "This type of file can harm your device, keep it anyway?", tap **Keep** / **Download anyway**: the file is the app itself.
 3. Open the downloaded file (tap the "Download complete" notification, or open the **Downloads** / **My Files** app and tap the file).
 4. Android will probably say your phone **isn't allowed to install unknown apps from this source**. Tap **Settings**, switch on **Allow from this source** (the switch is for the app you used: Chrome, Samsung Internet, Files...), then press **Back**. The wording differs between phone brands, but it is always "allow installing apps from this source / unknown apps".
 5. Tap **Install**. If Google Play Protect says it doesn't know the app, tap **More details › Install anyway**: the app is not on the Play Store, that is all.
 6. Tap **Open**. You can switch "allow from this source" off again afterwards.
-7. Tap **Start Day A** (any workout will do). The first time you start a workout Android asks to send notifications: tap **Allow**, because that is what shows the "rest over" message. Then go back, open the **Settings** tab in the app and tap **Test the alert: tap, then lock your phone**. Lock the phone and wait 5 seconds: it must buzz. If Settings says "Notifications: blocked", open the phone's Settings › Apps › Lift Log › Notifications and switch them on (the buzz is designed to work either way and only the written message needs it, but this has not been tried on a real phone).
+7. Tap **Start Day A** (any workout will do). The first time you start a workout Android asks to send notifications: tap **Allow**, because that is what shows the "rest over" message and the workout notification. Then go back, open the **Settings** tab in the app and tap **Test the alert: tap, then lock your phone**. Lock the phone and wait 5 seconds: it must buzz. If Settings says notifications are switched off, tap **Open notification settings** there (the buzz is designed to work either way and only the written messages need notifications, but this has not been tried on a real phone).
 
 **Samsung phones:** if the buzz is missing or late, open the phone's **Settings › Battery › Background usage limits** and make sure Lift Log is *not* under **Sleeping apps** (add it to **Never sleeping apps**).
+
+A longer list of things to try on the phone, step by step, is in **`PHONE-CHECKS.md`**.
 
 ## Installing a newer version
 
@@ -29,6 +33,7 @@ Download the new `.apk` the same way and install it **over** the old one. Never 
 ## Back up your data
 
 Settings › **Save backup to a file**. Pick Google Drive or any folder: that file is a full copy of everything. The app reminds you on the Workout tab if the last backup is more than 14 days old.
+Settings › **Automatic copies** can also write a copy into a folder you choose after every finished workout (Android does not allow the top of storage or Downloads: make a new folder). A folder on the phone is lost with the phone, so these copies do not replace saving a file to Google Drive now and then.
 To restore (new phone, or after a reset): install the app, then Settings › **Import a backup file**. The app shows what it will replace, keeps a safety copy of what was there, and offers **Undo last import**.
 "Share a copy" sends a copy through other apps but does not count as a saved backup.
 Android's own automatic cloud backup is also switched on, but it only works if your Google backup is turned on, so keep making backup files too.
